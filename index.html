@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KpopGen.xyz | Gen is for Generations X-Y-Z</title>
+  <title>KpopGen.xyz | Gen is for Generations</title>
   <meta
     name="description"
     content="KpopGen.xyz is a premium domain opportunity built for the multi-generational future of K-pop culture, fandom, news, tours, merchandise, and community."
@@ -25,7 +25,7 @@
     <div class="container nav-wrap">
       <a href="#" class="brand">
         <strong>KpopGen.xyz</strong>
-        <span>Gen is for Generations X-Y-Z</span>
+        <span>Gen is for Generations</span>
       </a>
 
       <div class="top-right-stack">
@@ -50,9 +50,9 @@
           <h1><span class="glow shine">KpopGen.xyz</span></h1>
           <h2>Gen is for Generations.</h2>
           <p>
-            Own or Lease KpopGen.xyz, a domain name to connect multi-generations, Now & back to the future of K-pop culture.
-            efortless flow "KpopGen.xyz" couldbe a media hub, fan destination, commerce brand,
-            and digital community? So many possiable branding positions
+            A domain built for the multi-generational future of K-pop culture.
+            Designed to feel like a media hub, fan destination, commerce brand,
+            and digital community all in one unforgettable name.
           </p>
 
           <div class="hero-actions">
@@ -107,6 +107,78 @@
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="magic-showcase">
+      <div class="container">
+        <div class="magic-showcase-head">
+          <div class="magic-kicker">Story in Motion</div>
+          <h2 class="section-title">Five scenes. One world-building brand.</h2>
+          <p class="section-copy">
+            From red carpet arrivals to global tours and unforgettable fan emotion,
+            this cinematic panel strip shows how KpopGen.xyz can feel like a living entertainment universe.
+          </p>
+        </div>
+
+        <div class="story-panels" id="storyPanels">
+          <article class="story-panel active" data-title="World Tour Map" data-copy="A glowing digital tour path connecting major cities across a futuristic K-pop world campaign.">
+            <img src="map.png" alt="K-pop world tour digital map" />
+            <div class="story-overlay">
+              <div class="story-index">01</div>
+              <h3>World Tour Map</h3>
+              <p>A glowing digital tour path connecting major cities across a futuristic K-pop world campaign.</p>
+            </div>
+          </article>
+
+          <article class="story-panel" data-title="Arena Spectacle" data-copy="Massive stage production, neon visuals, giant screens, crowd lights, and a futuristic concert atmosphere.">
+            <img src="concert.png" alt="K-pop futuristic concert over crowd to stage" />
+            <div class="story-overlay">
+              <div class="story-index">02</div>
+              <h3>Arena Spectacle</h3>
+              <p>Massive stage production, neon visuals, giant screens, crowd lights, and a futuristic concert atmosphere.</p>
+            </div>
+          </article>
+
+          <article class="story-panel" data-title="Red Carpet Arrival" data-copy="Band members pulling up on EV sport bikes with cameras flashing and the whole event locked in.">
+            <img src="bike.png" alt="K-pop stars arriving on electric sport bikes" />
+            <div class="story-overlay">
+              <div class="story-index">03</div>
+              <h3>Red Carpet Arrival</h3>
+              <p>Band members pulling up on EV sport bikes with cameras flashing and the whole event locked in.</p>
+            </div>
+          </article>
+
+          <article class="story-panel" data-title="Interview Moment" data-copy="A glamorous red carpet interview scene with press energy, sparkle, and premium entertainment polish.">
+            <img src="interview.png" alt="Female K-pop star red carpet interview" />
+            <div class="story-overlay">
+              <div class="story-index">04</div>
+              <h3>Interview Moment</h3>
+              <p>A glamorous red carpet interview scene with press energy, sparkle, and premium entertainment polish.</p>
+            </div>
+          </article>
+
+          <article class="story-panel" data-title="Fans in Full Emotion" data-copy="Close-up crowd emotion, tears, screams, lights, phones, and security holding the front line.">
+            <img src="fans.png" alt="Excited K-pop fans behind security" />
+            <div class="story-overlay">
+              <div class="story-index">05</div>
+              <h3>Fans in Full Emotion</h3>
+              <p>Close-up crowd emotion, tears, screams, lights, phones, and security holding the front line.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="story-controls">
+          <button class="story-btn" id="storyPrev" type="button" aria-label="Previous panel">‹</button>
+          <div class="story-dots" id="storyDots">
+            <button class="story-dot active" type="button" aria-label="Go to slide 1"></button>
+            <button class="story-dot" type="button" aria-label="Go to slide 2"></button>
+            <button class="story-dot" type="button" aria-label="Go to slide 3"></button>
+            <button class="story-dot" type="button" aria-label="Go to slide 4"></button>
+            <button class="story-dot" type="button" aria-label="Go to slide 5"></button>
+          </div>
+          <button class="story-btn" id="storyNext" type="button" aria-label="Next panel">›</button>
+        </div>
       </div>
     </section>
 
@@ -352,5 +424,75 @@
       <p>Premium domain concept for K-pop culture, fandom, media, tours, and merchandise.</p>
     </div>
   </footer>
+
+  <script>
+    const storyPanels = document.querySelectorAll('.story-panel');
+    const storyDots = document.querySelectorAll('.story-dot');
+    const prevBtn = document.getElementById('storyPrev');
+    const nextBtn = document.getElementById('storyNext');
+
+    let activeIndex = 0;
+    let storyTimer;
+
+    function setActivePanel(index) {
+      activeIndex = index;
+
+      storyPanels.forEach((panel, i) => {
+        panel.classList.toggle('active', i === activeIndex);
+      });
+
+      storyDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+      });
+    }
+
+    function nextPanel() {
+      const nextIndex = (activeIndex + 1) % storyPanels.length;
+      setActivePanel(nextIndex);
+    }
+
+    function prevPanel() {
+      const prevIndex = (activeIndex - 1 + storyPanels.length) % storyPanels.length;
+      setActivePanel(prevIndex);
+    }
+
+    function startStoryAuto() {
+      clearInterval(storyTimer);
+      storyTimer = setInterval(nextPanel, 3600);
+    }
+
+    if (storyPanels.length) {
+      setActivePanel(0);
+      startStoryAuto();
+
+      nextBtn.addEventListener('click', () => {
+        nextPanel();
+        startStoryAuto();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        prevPanel();
+        startStoryAuto();
+      });
+
+      storyDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          setActivePanel(index);
+          startStoryAuto();
+        });
+      });
+
+      storyPanels.forEach((panel, index) => {
+        panel.addEventListener('mouseenter', () => {
+          setActivePanel(index);
+          clearInterval(storyTimer);
+        });
+
+        panel.addEventListener('mouseleave', () => {
+          startStoryAuto();
+        });
+      });
+    }
+  </script>
 </body>
 </html>
