@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KpopGen.xyz | Gen is for Generations</title>
+  <meta
+    name="description"
+    content="KpopGen.xyz is a premium domain opportunity built for the multi-generational future of K-pop culture, fandom, news, tours, merchandise, and community."
+  />
+  <style>
+    :root {
+      --bg: #07070b;
+      --bg-soft: #11111a;
+      --panel: rgba(255, 255, 255, 0.08);
+      --panel-strong: rgba(255, 255, 255, 0.12);
+      --text: #ffffff;
+      --muted: #c9c9d6;
+      --pink: #ff2da8;
+      --purple: #9747ff;
+      --cyan: #17e7ff;
+      --gold: #ffd76d;
+      --line: rgba(255, 255, 255, 0.14);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      --radius: 22px;
+      --max: 1220px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 45, 168, 0.22), transparent 25%),
+        radial-gradient(circle at 80% 15%, rgba(23, 231, 255, 0.18), transparent 24%),
+        radial-gradient(circle at 70% 70%, rgba(151, 71, 255, 0.16), transparent 22%),
+        linear-gradient(180deg, #090910 0%, #07070b 45%, #090910 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .graffiti-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.32;
+      overflow: hidden;
+    }
+
+    .graffiti-bg span {
+      position: absolute;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      user-select: none;
+      white-space: nowrap;
+      filter: blur(0.3px);
+    }
+
+    .g1 { top: 6%; left: 3%; font-size: 5rem; color: rgba(255, 45, 168, 0.22); transform: rotate(-12deg); }
+    .g2 { top: 15%; right: -2%; font-size: 4.5rem; color: rgba(23, 231, 255, 0.16); transform: rotate(11deg); }
+    .g3 { top: 33%; left: 2%; font-size: 3.7rem; color: rgba(255, 255, 255, 0.08); transform: rotate(-8deg); }
+    .g4 { top: 45%; right: 5%; font-size: 5.2rem; color: rgba(151, 71, 255, 0.18); transform: rotate(-14deg); }
+    .g5 { top: 60%; left: 8%; font-size: 3.6rem; color: rgba(255, 215, 109, 0.12); transform: rotate(8deg); }
+    .g6 { bottom: 16%; right: 3%; font-size: 4.2rem; color: rgba(255, 45, 168, 0.16); transform: rotate(-7deg); }
+    .g7 { bottom: 6%; left: 4%; font-size: 4.8rem; color: rgba(23, 231, 255, 0.14); transform: rotate(10deg); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 7, 11, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand strong {
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      margin-top: 7px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
+      color: #fff;
+      box-shadow: 0 14px 35px rgba(151, 71, 255, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(151, 71, 255, 0.35);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 215, 109, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 215, 109, 0.07);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 6.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 .glow {
+      background: linear-gradient(90deg, #fff 0%, #ffd0ef 35%, #9ef7ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-points span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: #f3f3fb;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.05)),
+        linear-gradient(135deg, rgba(255, 45, 168, 0.12), rgba(23, 231, 255, 0.05));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -20% auto auto -20%;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255, 45, 168, 0.36), transparent 65%);
+      pointer-events: none;
+    }
+
+    .domain-badge {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(23, 231, 255, 0.08);
+      color: var(--cyan);
+      border: 1px solid rgba(23, 231, 255, 0.22);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .hero-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini-stats div {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .mini-stats strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    section {
+      padding: 28px 0 72px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .section-copy {
+      max-width: 780px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 1.04rem;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      padding: 24px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .quote-box {
+      margin-top: 24px;
+      padding: 24px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(255, 45, 168, 0.12), rgba(23, 231, 255, 0.06)),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      font-size: 1.15rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .gen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gen-card {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gen-card::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 68%);
+      pointer-events: none;
+    }
+
+    .gen-label {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 12px;
+    }
+
+    .gen-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .age {
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .gen-card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .gen-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .gen-card li {
+      color: #ececf7;
+      font-size: 0.95rem;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .gen-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--pink);
+    }
+
+    .potential-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .potential-card {
+      padding: 22px;
+    }
+
+    .potential-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.12rem;
+    }
+
+    .potential-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .word-wall {
+      position: relative;
+      padding: 34px;
+      overflow: hidden;
+    }
+
+    .word-wall::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(125deg, rgba(255,45,168,0.12), transparent 35%),
+        linear-gradient(300deg, rgba(23,231,255,0.10), transparent 38%),
+        linear-gradient(25deg, rgba(151,71,255,0.10), transparent 45%);
+      pointer-events: none;
+    }
+
+    .word-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .word-cloud span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.06);
+      min-height: 54px;
+    }
+
+    .word-cloud .big {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      padding: 16px 24px;
+    }
+
+    .sale-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .sale-copy,
+    .sale-form {
+      padding: 28px;
+    }
+
+    .sale-copy p,
+    .sale-form p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .sale-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .sale-list li {
+      padding-left: 18px;
+      position: relative;
+      color: #f0f0fa;
+    }
+
+    .sale-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    .price-box {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+    }
+
+    .price-box strong {
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-size: 0.92rem;
+      color: #f4f4fb;
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 6px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      padding: 14px 16px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(23, 231, 255, 0.55);
+      box-shadow: 0 0 0 3px rgba(23, 231, 255, 0.12);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 28px 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-wrap p {
+      color: var(--muted);
+    }
+
+    .shine {
+      position: relative;
+      display: inline-block;
+    }
+
+    .shine::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.32) 50%, transparent 80%);
+      transform: translateX(-120%);
+      animation: sweep 5s infinite linear;
+      pointer-events: none;
+    }
+
+    @keyframes sweep {
+      100% {
+        transform: translateX(120%);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .sale-grid,
+      .why-grid,
+      .gen-grid,
+      .potential-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .why-grid,
+      .gen-grid,
+      .potential-grid,
+      .sale-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero-card,
+      .sale-copy,
+      .sale-form,
+      .why-card,
+      .gen-card,
+      .potential-card,
+      .word-wall {
+        padding: 22px;
+      }
+
+      .g1, .g2, .g3, .g4, .g5, .g6, .g7 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="graffiti-bg" aria-hidden="true">
+    <span class="g1">KPOP STARS</span>
+    <span class="g2">FAN CULTURE</span>
+    <span class="g3">NEON BEATS</span>
+    <span class="g4">GLOBAL IDOLS</span>
+    <span class="g5">TOUR ENERGY</span>
+    <span class="g6">DIGITAL FANDOM</span>
+    <span class="g7">GEN . XYZ</span>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <strong>KpopGen.xyz</strong>
+        <span>Gen is for Generations</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#why">Why It Works</a>
+        <a href="#generations">Generations</a>
+        <a href="#potential">Potential</a>
+        <a href="#sale">Domain Inquiry</a>
+        <a href="#sale" class="btn btn-primary">Inquire Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Premium domain opportunity • K-pop culture brand</div>
+          <h1><span class="glow shine">KpopGen.xyz</span></h1>
+          <h2>Gen is for Generations.</h2>
+          <p>
+            A domain built for the multi-generational future of K-pop culture.
+            Designed to feel like a media hub, fan destination, commerce brand,
+            and digital community all in one unforgettable name.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#sale" class="btn btn-primary">Inquire About This Domain</a>
+            <a href="#potential" class="btn btn-secondary">See Brand Potential</a>
+          </div>
+
+          <div class="hero-points">
+            <span>NEWS</span>
+            <span>UPDATES</span>
+            <span>GOSSIP</span>
+            <span>TOURS</span>
+            <span>FAN CLUBS</span>
+            <span>FEATURES</span>
+            <span>MERCHANDISE</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="domain-badge">Available now</div>
+          <h3>Built for expansion</h3>
+          <p>
+            KpopGen.xyz sounds current, looks modern, and can scale into a
+            content, commerce, fandom, or entertainment brand with global appeal.
+          </p>
+
+          <div class="mini-stats">
+            <div>
+              <strong>Brand Rhythm</strong>
+              <span>“Kpop + Gen + XYZ” creates a short, memorable, digital-native flow.</span>
+            </div>
+            <div>
+              <strong>Visual Power</strong>
+              <span>Strong typography, youth culture energy, and crossover appeal across generations.</span>
+            </div>
+            <div>
+              <strong>Market Range</strong>
+              <span>Media, fan clubs, tours, creator features, merchandise, and community membership.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <h2 class="section-title">Why the name works</h2>
+        <p class="section-copy">
+          KpopGen.xyz is more than a domain. It is a ready-made brand concept.
+          “Kpop” is instantly recognizable. “Gen” expands the meaning into generations,
+          next-generation media, and identity. “.xyz” gives it a modern, global, startup-era finish.
+        </p>
+
+        <div class="why-grid">
+          <article class="panel why-card">
+            <h3>K-pop is global</h3>
+            <p>
+              The name connects immediately with music, fandom, idols, culture,
+              trends, performance, and international reach.
+            </p>
+          </article>
+
+          <article class="panel why-card">
+            <h3>Gen means generations</h3>
+            <p>
+              It speaks to Gen X, Gen Y, and Gen Z while also suggesting next-gen
+              media, discovery, and platform growth.
+            </p>
+          </article>
+
+          <article class="panel why-card">
+            <h3>Gen.XYZ flows</h3>
+            <p>
+              Phonetically it feels short and sharp. Graphically it looks clean,
+              futuristic, memorable, and easy to style across digital products.
+            </p>
+          </article>
+
+          <article class="panel why-card">
+            <h3>Built for categories</h3>
+            <p>
+              The domain naturally extends into news, updates, tours, gossip,
+              fan clubs, premium features, commerce, and branded experiences.
+            </p>
+          </article>
+        </div>
+
+        <div class="quote-box">
+          “K-pop is no longer one-age fandom. It is multi-generational.”
+        </div>
+      </div>
+    </section>
+
+    <section id="generations">
+      <div class="container">
+        <h2 class="section-title">Gen is for Generations</h2>
+        <p class="section-copy">
+          KpopGen.xyz can speak to different age groups in different ways, while
+          keeping them inside one brand universe. That makes the name flexible,
+          marketable, and highly scalable.
+        </p>
+
+        <div class="gen-grid">
+          <article class="panel gen-card">
+            <div class="gen-label">Gen X</div>
+            <h3>Discovery + crossover</h3>
+            <div class="age">Approx. ages 45–60</div>
+            <p>
+              Gen X may connect with K-pop through family influence, major media exposure,
+              crossover performances, streaming access, and live event curiosity.
+            </p>
+            <ul>
+              <li>Concert interest and premium event spending</li>
+              <li>Growing curiosity through mainstream global entertainment</li>
+              <li>Discovery through family, social platforms, and media buzz</li>
+            </ul>
+          </article>
+
+          <article class="panel gen-card">
+            <div class="gen-label">Gen Y / Millennials</div>
+            <h3>Digital buyers + fandom loyalty</h3>
+            <div class="age">Approx. ages 29–44</div>
+            <p>
+              Millennials are strong digital consumers with high comfort in streaming,
+              social engagement, fan culture, collectibles, events, and premium merch.
+            </p>
+            <ul>
+              <li>Strong social media and mobile engagement</li>
+              <li>High interest in experiences, community, and exclusive drops</li>
+              <li>Nostalgia-meets-modern entertainment behavior</li>
+            </ul>
+          </article>
+
+          <article class="panel gen-card">
+            <div class="gen-label">Gen Z</div>
+            <h3>Fast fandom + viral culture</h3>
+            <div class="age">Approx. ages 13–28</div>
+            <p>
+              Gen Z drives trend velocity. They live in clips, fandom identity,
+              creator ecosystems, group loyalty, visual culture, and always-on discovery.
+            </p>
+            <ul>
+              <li>Mobile-first media consumption</li>
+              <li>Rapid engagement with drops, clips, and updates</li>
+              <li>Style influence, fan club energy, and creator-led interaction</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="potential">
+      <div class="container">
+        <h2 class="section-title">What KpopGen.xyz could become</h2>
+        <p class="section-copy">
+          This domain is flexible enough to launch as a focused media destination
+          or expand into a broader K-pop platform with content, commerce, and fan participation.
+        </p>
+
+        <div class="potential-grid">
+          <article class="panel potential-card">
+            <h3>News hub</h3>
+            <p>Daily headlines, group announcements, comeback alerts, and trending developments.</p>
+          </article>
+
+          <article class="panel potential-card">
+            <h3>Updates feed</h3>
+            <p>Release calendars, teaser rollouts, live appearances, rankings, and moment-to-moment fan tracking.</p>
+          </article>
+
+          <article class="panel potential-card">
+            <h3>Gossip + culture</h3>
+            <p>Conversation-driving stories, industry chatter, style moments, and fan-led buzz.</p>
+          </article>
+
+          <article class="panel potential-card">
+            <h3>Tours + events</h3>
+            <p>Tour dates, venue alerts, travel bundles, city guides, and fan meetup visibility.</p>
+          </article>
+
+          <article class="panel potential-card">
+            <h3>Fan clubs</h3>
+            <p>Membership communities, premium access, identity-driven engagement, and exclusive content.</p>
+          </article>
+
+          <article class="panel potential-card">
+            <h3>Features + merch</h3>
+            <p>Long-form stories, interviews, style breakdowns, affiliate storefronts, and branded merchandise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="panel word-wall">
+          <h2 class="section-title">The language of the brand</h2>
+          <p class="section-copy" style="margin-bottom: 20px;">
+            These are not just categories. They are the visual engine of the site —
+            poster-like, layered, energetic, and built to stand out.
+          </p>
+
+          <div class="word-cloud">
+            <span class="big">NEWS</span>
+            <span>UPDATES</span>
+            <span class="big">GOSSIP</span>
+            <span>TOURS</span>
+            <span class="big">FAN CLUBS</span>
+            <span>FEATURES</span>
+            <span class="big">MERCHANDISE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sale">
+      <div class="container sale-grid">
+        <div class="panel sale-copy">
+          <h2 class="section-title">Domain for sale</h2>
+          <p>
+            KpopGen.xyz is a rare brandable domain positioned for music media,
+            fandom commerce, digital community, youth culture, and next-generation entertainment.
+          </p>
+          <p>
+            The name feels current now, but also has room to grow with the market.
+            It can support editorial content, fan engagement tools, event discovery,
+            premium memberships, creator partnerships, and branded merchandise.
+          </p>
+
+          <ul class="sale-list">
+            <li>Strong entertainment and culture positioning</li>
+            <li>Cross-generational audience logic built into the name</li>
+            <li>Modern “.xyz” identity with startup-era energy</li>
+            <li>Ready for media, commerce, fandom, or community use</li>
+          </ul>
+
+          <div class="price-box">
+            <strong>Interested in acquiring KpopGen.xyz?</strong>
+            <span>Send an inquiry or submit an offer using the form.</span>
+          </div>
+        </div>
+
+        <div class="panel sale-form">
+          <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Submit an inquiry</h2>
+          <p>
+            Replace the form action later with your email service, Formspree, or your broker contact form.
+          </p>
+
+          <form action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="your@email.com" />
+            </label>
+
+            <label>
+              Company / Brand
+              <input type="text" name="company" placeholder="Company or project name" />
+            </label>
+
+            <label>
+              Message / Offer
+              <textarea name="message" placeholder="Tell us how you would like to use KpopGen.xyz or submit an offer."></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p class="note">Tip: you can also replace this with direct contact info or a broker email block.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>
+        <strong style="font-size: 1.1rem;">KpopGen.xyz</strong>
+        <p>Gen is for Generations.</p>
+      </div>
+      <p>Premium domain concept for K-pop culture, fandom, media, tours, and merchandise.</p>
+    </div>
+  </footer>
+</body>
+</html>
