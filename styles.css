@@ -379,9 +379,118 @@ main {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 34px;
-  align-items: center;
+  align-items: start;
+}
+
+.hero-right {
+  display: grid;
+  gap: 22px;
+}
+
+.buy-now-ad {
+  position: relative;
+  padding: 26px 24px 28px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(145deg, rgba(255, 45, 168, 0.16), rgba(23, 231, 255, 0.08)),
+    rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.34),
+    0 0 35px rgba(255, 45, 168, 0.12),
+    inset 0 0 30px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.buy-now-ad::before {
+  content: "";
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255, 45, 168, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+.buy-now-ad::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 26%;
+  height: 180%;
+  transform: rotate(16deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.05) 30%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.05) 70%,
+    rgba(255,255,255,0) 100%
+  );
+  animation: buyNowSweep 4.2s linear infinite;
+  pointer-events: none;
+}
+
+.buy-now-top {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 109, 0.24);
+  background: rgba(255, 215, 109, 0.07);
+}
+
+.buy-now-main {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.08),
+    0 0 22px rgba(23, 231, 255, 0.08);
+}
+
+.buy-now-sub {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--cyan);
+}
+
+.buy-now-ad p {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 1rem;
+  max-width: 36ch;
+}
+
+@keyframes buyNowSweep {
+  0% {
+    left: -32%;
+  }
+  100% {
+    left: 118%;
+  }
 }
 
 .eyebrow {
@@ -863,6 +972,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .hero-right {
+    grid-template-columns: 1fr;
+  }
+
   .nav-wrap {
     flex-direction: column;
     align-items: flex-start;
@@ -896,8 +1009,13 @@ footer {
   .why-card,
   .gen-card,
   .potential-card,
-  .word-wall {
+  .word-wall,
+  .buy-now-ad {
     padding: 22px;
+  }
+
+  .buy-now-main {
+    font-size: 2rem;
   }
 
   .g1,
