@@ -479,6 +479,14 @@ main {
   max-width: 36ch;
 }
 
+.buy-now-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 @keyframes buyNowSweep {
   0% { left: -32%; }
   100% { left: 118%; }
@@ -1052,44 +1060,36 @@ section {
   margin-bottom: 6px;
 }
 
-form {
-  display: grid;
-  gap: 14px;
+.sale-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
 }
 
-label {
-  font-size: 0.92rem;
-  color: #f4f4fb;
-  font-weight: 700;
-}
-
-input,
-textarea {
-  width: 100%;
-  margin-top: 6px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+.contact-card {
+  padding: 18px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
-  padding: 14px 16px;
-  font: inherit;
-  outline: none;
+  border: 1px solid var(--line);
+  margin-top: 14px;
 }
 
-input:focus,
-textarea:focus {
-  border-color: rgba(23, 231, 255, 0.55);
-  box-shadow: 0 0 0 3px rgba(23, 231, 255, 0.12);
+.contact-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
-textarea {
-  min-height: 130px;
-  resize: vertical;
+.contact-card a {
+  color: var(--cyan);
+  word-break: break-word;
 }
 
 .note {
   font-size: 0.9rem;
   color: var(--muted);
+  margin-top: 16px;
 }
 
 footer {
@@ -1262,5 +1262,12 @@ footer {
   .story-btn {
     width: 42px;
     height: 42px;
+  }
+
+  .hero-actions,
+  .sale-actions,
+  .buy-now-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
