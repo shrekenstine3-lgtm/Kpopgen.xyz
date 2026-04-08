@@ -1099,43 +1099,64 @@
   </footer>
 
   <script>
-    const slides = document.querySelectorAll(".slide");
-    const thumbs = document.querySelectorAll(".thumb");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+  const slides = document.querySelectorAll(".slide");
+  const thumbs = document.querySelectorAll(".thumb");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-    let currentSlide = 0;
+  let currentSlide = 0;
+  let autoSlide;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-
-      thumbs.forEach((thumb, i) => {
-        thumb.classList.toggle("active", i === index);
-      });
-
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function prevSlide() {
-      const prev = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(prev);
-    }
-
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
-
-    thumbs.forEach((thumb) => {
-      thumb.addEventListener("click", () => {
-        showSlide(Number(thumb.dataset.slide));
-      });
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
     });
-  </script>
-</body>
-</html>
+
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === index);
+    });
+
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    const prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(() => {
+      nextSlide();
+    }, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      showSlide(Number(thumb.dataset.slide));
+      resetAutoSlide();
+    });
+  });
+
+  showSlide(0);
+  startAutoSlide();
+</script>
