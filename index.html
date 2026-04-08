@@ -6,292 +6,941 @@
   <title>KpopGen.xyz | Domain For Sale</title>
   <meta
     name="description"
-    content="KpopGen.xyz is a brandable domain and naming concept available for acquisition. Positioned for K-pop media, tours, fandom, merchandise, and digital community."
+    content="KpopGen.xyz is a brandable entertainment domain for sale. Positioned for K-pop media, fandom, tours, merchandise, digital community, and global youth culture."
   />
-  <link rel="stylesheet" href="styles.css" />
+  <meta
+    name="keywords"
+    content="KpopGen.xyz, K-pop domain for sale, entertainment brand, fandom brand, K-pop media, K-pop merch, digital community, domain acquisition"
+  />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <style>
+    :root {
+      --bg: #07070b;
+      --panel: rgba(255, 255, 255, 0.06);
+      --panel-strong: rgba(255, 255, 255, 0.1);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f4f5f7;
+      --muted: #b8bcc7;
+      --soft: #8a8f9a;
+      --pink: #ff3fb4;
+      --blue: #4bd4ff;
+      --violet: #9d6bff;
+      --glow: 0 0 24px rgba(155, 107, 255, 0.2), 0 0 40px rgba(75, 212, 255, 0.12);
+      --radius: 20px;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(157, 107, 255, 0.12), transparent 30%),
+        radial-gradient(circle at top left, rgba(255, 63, 180, 0.1), transparent 28%),
+        radial-gradient(circle at center, rgba(75, 212, 255, 0.06), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 7, 11, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand-mini {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      font-size: 0.92rem;
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      padding: 54px 0 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+      box-shadow: var(--glow);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .section-card,
+    .feature-card,
+    .gen-card,
+    .potential-card,
+    .sale-card,
+    .contact-card,
+    .gallery-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+    }
+
+    .hero-copy {
+      padding: 34px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #ffffff 0%, #dcdfff 38%, #83dcff 72%, #ff6fd0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.28rem;
+      color: #ffffff;
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+
+    .hero-copy p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      max-width: 760px;
+    }
+
+    .renewal-note {
+      margin: 20px 0 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(75, 212, 255, 0.25);
+      background: rgba(75, 212, 255, 0.06);
+      border-radius: 14px;
+      color: #dff7ff;
+      font-size: 0.96rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--pink), var(--violet), var(--blue));
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 12px 34px rgba(157, 107, 255, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 38px rgba(157, 107, 255, 0.36);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 14px;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+    }
+
+    .hero-card .big-sale {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-card .big-sale span {
+      display: block;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-top: 10px;
+      line-height: 1.45;
+    }
+
+    .hero-card .stack {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .tagline-band {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 0.84rem;
+      line-height: 1.8;
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 840px;
+    }
+
+    .features-grid,
+    .gens-grid,
+    .potential-grid,
+    .sale-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .features-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .gens-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .potential-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sale-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-card,
+    .gen-card,
+    .potential-card,
+    .sale-card,
+    .contact-card,
+    .gallery-card,
+    .section-card {
+      padding: 24px;
+    }
+
+    .feature-card h3,
+    .gen-card h3,
+    .potential-card h3,
+    .sale-card h3,
+    .contact-card h3,
+    .gallery-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      color: #ffffff;
+    }
+
+    .feature-card p,
+    .gen-card p,
+    .potential-card p,
+    .sale-card p,
+    .contact-card p,
+    .gallery-card p,
+    .section-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .gen-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 0.86rem;
+      color: var(--blue);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    ul.clean li {
+      color: var(--muted);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    ul.clean li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+      box-shadow: var(--glow);
+    }
+
+    .quote-box {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--pink);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      color: #f3d7ec;
+      font-weight: 600;
+    }
+
+    .gallery-wrap {
+      display: grid;
+      gap: 18px;
+    }
+
+    .gallery-stage {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      min-height: 520px;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+      min-height: 520px;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 28px;
+      background: linear-gradient(to top, rgba(7, 7, 11, 0.9), rgba(7, 7, 11, 0.15));
+    }
+
+    .slide-num {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .slide-overlay h3 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+    }
+
+    .slide-overlay p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .gallery-controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .gallery-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .gallery-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .gallery-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .gallery-thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .thumb {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .thumb.active,
+    .thumb:hover {
+      color: #ffffff;
+      border-color: rgba(75, 212, 255, 0.4);
+      background: rgba(75, 212, 255, 0.1);
+    }
+
+    .sale-card strong,
+    .contact-card strong {
+      color: #ffffff;
+    }
+
+    .sale-note {
+      margin-top: 14px;
+      color: var(--soft);
+      font-size: 0.92rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    footer {
+      padding: 36px 0 64px;
+      color: var(--soft);
+    }
+
+    .footer-card {
+      padding: 22px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .sale-grid,
+      .features-grid,
+      .potential-grid,
+      .gens-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 32px;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .feature-card,
+      .gen-card,
+      .potential-card,
+      .sale-card,
+      .contact-card,
+      .gallery-card,
+      .section-card {
+        padding: 20px;
+      }
+
+      .slide,
+      .gallery-stage {
+        min-height: 420px;
+      }
+
+      .slide img {
+        height: 420px;
+      }
+
+      .tagline-band {
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="graffiti-bg" aria-hidden="true">
-    <span class="g1 blink-a">KPOP STARS</span>
-    <span class="g2 blink-b">FAN CULTURE</span>
-    <span class="g3 blink-c">NEON BEATS</span>
-    <span class="g4 blink-d">GLOBAL IDOLS</span>
-    <span class="g5 blink-e">TOUR ENERGY</span>
-    <span class="g6 blink-f">DIGITAL FANDOM</span>
-    <span class="g7 blink-g">GEN . XYZ</span>
-  </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand-mini" href="#top">KpopGen.xyz</a>
 
-  <header>
-    <div class="container nav-wrap">
-      <a href="#" class="brand">
-        <strong>KpopGen.xyz</strong>
-        <span>Non premium level .xyz = "NO CRAZY RENEWAL FEES" (source @ .xyz)</span>
-      </a>
-
-      <div class="top-right-stack">
-        <div class="domain-sale-badge shine-wave">Domain 4 Sale</div>
-
-        <nav class="nav-links">
-          <a href="#why">Why It Works</a>
-          <a href="#generations">Generations</a>
-          <a href="#potential">Potential</a>
-          <a href="#sale">Sale Details</a>
-          <a href="#sale" class="btn btn-primary">Make Offer</a>
-        </nav>
-      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#why-it-works">Why It Works</a>
+        <a href="#generations">Generations</a>
+        <a href="#potential">Potential</a>
+        <a href="#sale-details">Sale Details</a>
+        <a href="#direct-inquiry">Make Offer</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Brandable domain opportunity • listed for acquisition</div>
-          <h1><span class="glow shine">KpopGen.xyz</span></h1>
-          <h2>Gen is for Grouping x3 Generations.</h2>
-          <p>
-            KpopGen.xyz is a brandable domain name and naming concept available for acquisition.
-            Positioned for K-pop media, fandom, tours, features, merchandise, and digital community,
-            this name is designed to feel like a live entertainment brand from day one.
-          </p>
-
-          <div class="hero-actions">
-            <a href="https://auctions.godaddy.com/beta?itc=dcc_portfolio_auctions&query=Kpopgen.xyz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GoDaddy Listing</a>
-            <a href="#sale" class="btn btn-secondary">Direct Inquiry</a>
-          </div>
-
-          <div class="hero-points">
-            <span>NEWS</span>
-            <span>UPDATES</span>
-            <span>GOSSIP</span>
-            <span>TOURS</span>
-            <span>FAN CLUBS</span>
-            <span>FEATURES</span>
-            <span>MERCHANDISE</span>
-          </div>
+      <div class="container">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Brandable domain opportunity • listed for acquisition
         </div>
 
-        <aside class="hero-right">
-          <div class="buy-now-ad">
-            <div class="buy-now-top">BUY ME NOW</div>
-            <div class="buy-now-main">DOMAIN 4 SALE</div>
-            <div class="buy-now-sub">KpopGen.xyz</div>
-            <p> Standard Renewal Fees!
-              Brandable entertainment domain. Open to considering up to 80% of value in non-advisory equity
-              
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1><span>KpopGen.xyz</span></h1>
+            <p class="hero-subtitle">Gen is for generations.</p>
+
+            <p>
+              KpopGen.xyz is a brandable domain name and naming concept available for acquisition.
+              Positioned for K-pop media, fandom, tours, merchandise, features, and digital community,
+              this name is designed to feel like a live entertainment brand from day one.
             </p>
-            <div class="buy-now-actions">
-              <a href="https://auctions.godaddy.com/beta?itc=dcc_portfolio_auctions&query=Kpopgen.xyz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GoDaddy Listing</a>
-              <a href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20about%20KpopGen.xyz" class="btn btn-secondary">Email Inquiry</a>
+
+            <p>
+              It works as a media channel, fan platform, campaign brand, commerce brand, or entertainment launchpad.
+              Short, current, and flexible, it gives a buyer a name with instant category recognition and room to scale.
+            </p>
+
+            <div class="renewal-note">
+              KpopGen.xyz is positioned as a standard-renewal-fee .xyz name, not a high-renewal premium tier.
+            </div>
+
+            <div class="cta-row">
+              <a
+                class="btn btn-primary"
+                href="https://auctions.godaddy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GoDaddy Listing
+              </a>
+
+              <a class="btn btn-secondary" href="#direct-inquiry">Direct Inquiry</a>
+            </div>
+
+            <div class="tagline-band">
+              News • Updates • Gossip • Tours • Fan Clubs • Features • Merchandise
             </div>
           </div>
-        </aside>
+
+          <aside class="hero-card">
+            <div>
+              <h2>Domain For Sale</h2>
+              <p class="big-sale">
+                KpopGen.xyz
+                <span>
+                  Brandable entertainment domain with strong crossover potential across media,
+                  fandom, commerce, experiences, and digital community.
+                </span>
+              </p>
+
+              <div class="stack">
+                <div class="section-card">
+                  <p><strong>Positioning:</strong> K-pop, culture, fandom, youth media, tours, and merch.</p>
+                </div>
+                <div class="section-card">
+                  <p><strong>Buyer angle:</strong> Ready-made name for a launch, campaign, microsite, or platform brand.</p>
+                </div>
+                <div class="section-card">
+                  <p><strong>Deal note:</strong> Open to considering up to 80% of value in non-advisory equity.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a
+                class="btn btn-primary"
+                href="https://auctions.godaddy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy / View Listing
+              </a>
+              <a class="btn btn-secondary" href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20for%20KpopGen.xyz">
+                Email Inquiry
+              </a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section id="why" class="why-top">
+    <section id="why-it-works">
       <div class="container">
-        <h2 class="section-title">Why the name works</h2>
-        <p class="section-copy">
-          KpopGen.xyz is more than a domain. It is a naming concept built around a fast,
-          recognizable entertainment category. “Kpop” is instantly recognizable. “Gen”
-          grouping x3 by generations, next-generation media, and identity.
-          “.xyz” gives it a modern, global, startup-era finish.
-        </p>
+        <div class="section-head">
+          <div class="kicker">Why the name works</div>
+          <h2>A clear entertainment name with room to expand.</h2>
+          <p>
+            KpopGen.xyz is more than a domain. It is a naming concept built around a recognizable entertainment category.
+            “K-pop” is instantly understood. “Gen” points to generations, next-gen media, identity, and audience grouping.
+            “.xyz” adds a modern, digital-native finish.
+          </p>
+        </div>
 
-        <div class="why-grid">
-          <article class="panel why-card">
+        <div class="features-grid">
+          <article class="feature-card">
             <h3>K-pop is global</h3>
             <p>
-              The name connects immediately with music, fandom, idols, culture,
-              trends, performance, and international reach.
+              The name immediately connects with music, fandom, idols, culture, trends,
+              performance, and international reach.
             </p>
           </article>
 
-          <article class="panel why-card">
-            <h3>Gen targets Groups</h3>
+          <article class="feature-card">
+            <h3>Gen widens the audience</h3>
             <p>
-              It speaks to Gen X, Gen Y, and Gen Z while also suggesting next-gen
-              media, discovery, and platform growth.
+              It can speak to Gen X, Millennials, and Gen Z while also signaling
+              next-generation media, discovery, and platform growth.
             </p>
           </article>
 
-          <article class="panel why-card">
-            <h3>KpopGen.XYZ flows</h3>
+          <article class="feature-card">
+            <h3>KpopGen.xyz flows</h3>
             <p>
-              Phonetically playful, it feels short and sharp.
+              Short, sharp, and highly brandable, the name feels digital, current,
+              and easy to remember.
             </p>
           </article>
 
-          <article class="panel why-card">
-            <h3>Named for categories</h3>
+          <article class="feature-card">
+            <h3>Built for categories</h3>
             <p>
-              The domain naturally extends into news, updates, tours, gossip,
+              The name naturally extends into news, updates, tours, gossip,
               fan clubs, features, commerce, and branded experiences.
             </p>
           </article>
         </div>
 
         <div class="quote-box">
-          “K-pop is not one-age fandom. Its becoming multi-generational.”
+          “K-pop is no longer a one-age fandom. It is increasingly multi-generational.”
         </div>
       </div>
     </section>
 
-    <section class="magic-showcase">
+    <section id="brand-vision">
       <div class="container">
-        <div class="magic-showcase-head">
-          <div class="magic-kicker">Brand Vision</div>
-          <h2 class="section-title">World-building Entertainment.</h2>
-          <p class="section-copy">
-            These visuals show genrerated concept art. In the hands of the right buyer:
-            A brand built around one clear name.
+        <div class="section-head">
+          <div class="kicker">Brand vision</div>
+          <h2>World-building entertainment.</h2>
+          <p>
+            These visuals are generated concept art. In the hands of the right buyer,
+            the domain can become a cohesive entertainment brand built around one clear name.
           </p>
         </div>
 
-        <div class="story-panels" id="storyPanels">
-          <article class="story-panel active">
-            <img src="map.png" alt="K-pop world tour digital map" />
-            <div class="story-overlay">
-              <div class="story-index">01</div>
-              <h3>World Tour Map</h3>
-              <p>A glowing route system connecting major cities for a global K-pop campaign.</p>
+        <div class="gallery-wrap">
+          <div class="gallery-stage">
+            <!-- Replace the image paths below only if your current filenames are different. -->
+            <div class="slide active">
+              <img src="images/kpop-world-tour-map.jpg" alt="K-pop world tour digital map" />
+              <div class="slide-overlay">
+                <div class="slide-num">01</div>
+                <h3>World Tour Map</h3>
+                <p>A glowing route system connecting major cities for a global K-pop campaign.</p>
+              </div>
             </div>
-          </article>
 
-          <article class="story-panel">
-            <img src="concert.png" alt="K-pop futuristic concert over crowd to stage" />
-            <div class="story-overlay">
-              <div class="story-index">02</div>
-              <h3>Arena Spectacle</h3>
-              <p>Massive stage production, neon visuals, giant screens, crowd lights, and futuristic scale.</p>
+            <div class="slide">
+              <img src="images/kpop-arena-spectacle.jpg" alt="K-pop futuristic concert over crowd to stage" />
+              <div class="slide-overlay">
+                <div class="slide-num">02</div>
+                <h3>Arena Spectacle</h3>
+                <p>Massive stage production, neon visuals, giant screens, crowd lights, and futuristic scale.</p>
+              </div>
             </div>
-          </article>
 
-          <article class="story-panel">
-            <img src="bikes.png" alt="K-pop stars arriving on electric sport bikes" />
-            <div class="story-overlay">
-              <div class="story-index">03</div>
-              <h3>Red Carpet Arrival</h3>
-              <p>Band members pulling up with cameras flashing and a premium entertainment feel.</p>
+            <div class="slide">
+              <img src="images/kpop-red-carpet-arrival.jpg" alt="K-pop stars arriving on electric sport bikes" />
+              <div class="slide-overlay">
+                <div class="slide-num">03</div>
+                <h3>Red Carpet Arrival</h3>
+                <p>Artists pull in with cameras flashing and a premium entertainment feel.</p>
+              </div>
             </div>
-          </article>
 
-          <article class="story-panel">
-            <img src="interview.png" alt="Female K-pop star red carpet interview" />
-            <div class="story-overlay">
-              <div class="story-index">04</div>
-              <h3>Interview Moment</h3>
-              <p>Glamour, media attention, and polished celebrity storytelling potential.</p>
+            <div class="slide">
+              <img src="images/kpop-interview-moment.jpg" alt="Female K-pop star red carpet interview" />
+              <div class="slide-overlay">
+                <div class="slide-num">04</div>
+                <h3>Interview Moment</h3>
+                <p>Glamour, media attention, and polished celebrity storytelling potential.</p>
+              </div>
             </div>
-          </article>
 
-          <article class="story-panel">
-            <img src="fans.png" alt="Excited K-pop fans behind security" />
-            <div class="story-overlay">
-              <div class="story-index">05</div>
-              <h3>Fans in Full Emotion</h3>
-              <p>The emotional side of fandom: energy, loyalty, phones, lights, and crowd intensity.</p>
+            <div class="slide">
+              <img src="images/kpop-fans-full-emotion.jpg" alt="Excited K-pop fans behind security" />
+              <div class="slide-overlay">
+                <div class="slide-num">05</div>
+                <h3>Fans in Full Emotion</h3>
+                <p>The emotional side of fandom: energy, loyalty, phones, lights, and crowd intensity.</p>
+              </div>
             </div>
-          </article>
-        </div>
-
-        <div class="story-controls">
-          <button class="story-btn" id="storyPrev" type="button" aria-label="Previous panel">‹</button>
-          <div class="story-dots" id="storyDots">
-            <button class="story-dot active" type="button" aria-label="Go to slide 1"></button>
-            <button class="story-dot" type="button" aria-label="Go to slide 2"></button>
-            <button class="story-dot" type="button" aria-label="Go to slide 3"></button>
-            <button class="story-dot" type="button" aria-label="Go to slide 4"></button>
-            <button class="story-dot" type="button" aria-label="Go to slide 5"></button>
           </div>
-          <button class="story-btn" id="storyNext" type="button" aria-label="Next panel">›</button>
+
+          <div class="gallery-controls">
+            <div class="gallery-buttons">
+              <button class="gallery-btn" id="prevBtn" aria-label="Previous slide">&#8249;</button>
+              <button class="gallery-btn" id="nextBtn" aria-label="Next slide">&#8250;</button>
+            </div>
+
+            <div class="gallery-thumbs" aria-label="Gallery slide chooser">
+              <button class="thumb active" data-slide="0">World Tour</button>
+              <button class="thumb" data-slide="1">Arena</button>
+              <button class="thumb" data-slide="2">Arrival</button>
+              <button class="thumb" data-slide="3">Interview</button>
+              <button class="thumb" data-slide="4">Fans</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="build-strip-section">
+    <section id="expansion">
       <div class="container">
-        <div class="panel build-strip">
-          <div class="build-strip-left">
-            <div class="domain-badge">Available now</div>
-            <h2>Named for expansion</h2>
-            <p>
-              KpopGen.xyz sounds current, looks modern, and can scale into a content,
-              commerce, fandom, or entertainment brand with global appeal.
-            </p>
-          </div>
+        <div class="section-head">
+          <div class="kicker">Available now</div>
+          <h2>Named for expansion.</h2>
+          <p>
+            KpopGen.xyz sounds current, looks modern, and can scale into a content,
+            commerce, fandom, or entertainment brand with global appeal.
+          </p>
+        </div>
 
-          <div class="build-strip-stats">
-            <div class="build-stat">
-              <strong>Brand Rhythm</strong>
-              <span>“Kpop + Gen + XYZ” creates a short, memorable, digital-native flow.</span>
-            </div>
-            <div class="build-stat">
-              <strong>Visual Power</strong>
-              <span>Strong typography, youth culture energy, and crossover appeal across generations.</span>
-            </div>
-            <div class="build-stat">
-              <strong>Market Range</strong>
-              <span>Media, fan clubs, tours, creator features, merchandise, and community membership.</span>
-            </div>
-          </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Brand rhythm</h3>
+            <p>“Kpop + Gen + XYZ” creates a short, memorable, digital-native flow.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Visual power</h3>
+            <p>Strong typography, youth culture energy, and crossover appeal across generations.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Market range</h3>
+            <p>Media, fan clubs, tours, creator features, merchandise, and membership-driven community.</p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Campaign-ready</h3>
+            <p>Works as a standalone brand, a launch page, a microsite, or a digital content channel.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="generations">
       <div class="container">
-        <h2 class="section-title">Gen is for Digital Consumers by Generations</h2>
-        <p class="section-copy">
-          KpopGen.xyz can speak to different age groups in different ways, while
-          keeping them inside one brand universe. That makes the name flexible,
-          marketable, and highly scalable.
-        </p>
+        <div class="section-head">
+          <div class="kicker">Generations</div>
+          <h2>Gen is for digital consumers across generations.</h2>
+          <p>
+            KpopGen.xyz can speak to different age groups in different ways while keeping them inside one brand universe.
+            That makes the name flexible, marketable, and highly scalable.
+          </p>
+        </div>
 
-        <div class="gen-grid">
-          <article class="panel gen-card">
-            <div class="gen-label">Gen X</div>
+        <div class="gens-grid">
+          <article class="gen-card">
+            <span class="gen-label">Gen X</span>
             <h3>Discovery + crossover</h3>
-            <div class="age">Approx. ages 45–60</div>
             <p>
-              Gen X may connect with K-pop through family influence, media exposure,
-              crossover performances, streaming access, and live event curiosity.
+              Approx. ages 45–60. Gen X may connect with K-pop through family influence,
+              media exposure, crossover performances, streaming access, and live event curiosity.
             </p>
-            <ul>
+            <ul class="clean">
               <li>Concert interest and premium event spending</li>
               <li>Growing curiosity through mainstream global entertainment</li>
               <li>Discovery through family, social platforms, and media buzz</li>
             </ul>
           </article>
 
-          <article class="panel gen-card">
-            <div class="gen-label">Gen Y / Millennials</div>
+          <article class="gen-card">
+            <span class="gen-label">Gen Y / Millennials</span>
             <h3>Digital buyers + fandom loyalty</h3>
-            <div class="age">Approx. ages 29–44</div>
             <p>
-              Millennials are strong digital consumers with high comfort in streaming,
+              Approx. ages 29–44. Millennials are strong digital consumers with high comfort in streaming,
               social engagement, fan culture, collectibles, events, and merch.
             </p>
-            <ul>
+            <ul class="clean">
               <li>Strong social media and mobile engagement</li>
               <li>High interest in experiences, community, and exclusive drops</li>
               <li>Nostalgia-meets-modern entertainment behavior</li>
             </ul>
           </article>
 
-          <article class="panel gen-card">
-            <div class="gen-label">Gen Z</div>
+          <article class="gen-card">
+            <span class="gen-label">Gen Z</span>
             <h3>Fast fandom + viral culture</h3>
-            <div class="age">Approx. ages 13–28</div>
             <p>
-              Gen Z drives trend velocity. They live in clips, fandom identity,
+              Approx. ages 13–28. Gen Z drives trend velocity. They live in clips, fandom identity,
               creator ecosystems, group loyalty, visual culture, and always-on discovery.
             </p>
-            <ul>
+            <ul class="clean">
               <li>Mobile-first media consumption</li>
               <li>Rapid engagement with drops, clips, and updates</li>
-              <li>Style influence, fan club energy, and creator-led interaction</li>
+              <li>Style influence, fan-club energy, and creator-led interaction</li>
             </ul>
           </article>
         </div>
@@ -300,201 +949,199 @@
 
     <section id="potential">
       <div class="container">
-        <h2 class="section-title">What KpopGen.xyz could become</h2>
-        <p class="section-copy">
-          KpopGen.xyz by name is flexible enough to launch as a focused media destination
-          or expand into a broader K-pop platform with content, commerce, fan participation,
-          and event visibility.
-        </p>
+        <div class="section-head">
+          <div class="kicker">Potential</div>
+          <h2>What KpopGen.xyz could become</h2>
+          <p>
+            By name alone, KpopGen.xyz is flexible enough to launch as a focused media destination
+            or expand into a broader K-pop platform with content, commerce, fan participation, and event visibility.
+          </p>
+        </div>
 
         <div class="potential-grid">
-          <article class="panel potential-card">
+          <article class="potential-card">
             <h3>News hub</h3>
             <p>Daily headlines, group announcements, comeback alerts, and trending developments.</p>
           </article>
 
-          <article class="panel potential-card">
+          <article class="potential-card">
             <h3>Updates feed</h3>
             <p>Release calendars, teaser rollouts, live appearances, rankings, and fan tracking.</p>
           </article>
 
-          <article class="panel potential-card">
-            <h3>Gossip + culture</h3>
-            <p>Conversation-driving stories, industry chatter, style moments, and fan-led buzz.</p>
+          <article class="potential-card">
+            <h3>Culture + buzz</h3>
+            <p>Conversation-driving stories, style moments, industry chatter, and fan-led momentum.</p>
           </article>
 
-          <article class="panel potential-card">
+          <article class="potential-card">
             <h3>Tours + events</h3>
             <p>Tour dates, venue alerts, travel bundles, city guides, and fan meetup visibility.</p>
           </article>
 
-          <article class="panel potential-card">
+          <article class="potential-card">
             <h3>Fan clubs</h3>
             <p>Membership communities, premium access, identity-driven engagement, and exclusive content.</p>
           </article>
 
-          <article class="panel potential-card">
+          <article class="potential-card">
             <h3>Features + merch</h3>
             <p>Long-form stories, interviews, style breakdowns, affiliate storefronts, and branded merchandise.</p>
+          </article>
+        </div>
+
+        <div class="quote-box" style="margin-top: 22px;">
+          These are not just categories. They are the visual engine of the name:
+          poster-like, layered, energetic, and built to stand out.
+        </div>
+      </div>
+    </section>
+
+    <section id="sale-details">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Sale details</div>
+          <h2>Domain for sale</h2>
+          <p>
+            KpopGen.xyz is a brandable domain name available for acquisition.
+            It is positioned for K-pop media, fandom commerce, digital community, youth culture, tours, and entertainment use.
+          </p>
+        </div>
+
+        <div class="sale-grid">
+          <article class="sale-card">
+            <h3>Why this landing page exists</h3>
+            <p>
+              This domain is being used as its own showcase page to demonstrate naming potential to buyers,
+              investors, media groups, entertainment operators, and startup founders.
+            </p>
+            <ul class="clean">
+              <li>Listed on GoDaddy</li>
+              <li>Serious inquiries welcome</li>
+              <li>Direct email contact available</li>
+              <li>Open to considering up to 80% of value in non-advisory equity</li>
+            </ul>
+          </article>
+
+          <article class="sale-card">
+            <h3>Acquisition path</h3>
+            <p>
+              Interested in acquiring KpopGen.xyz? View the GoDaddy listing for marketplace details
+              or send a direct inquiry by email.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="btn btn-primary"
+                href="https://auctions.godaddy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GoDaddy Listing
+              </a>
+              <a class="btn btn-secondary" href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20for%20KpopGen.xyz">
+                Email Inquiry
+              </a>
+            </div>
+            <p class="sale-note">
+              Use direct email for serious buyer conversations. Use the GoDaddy listing for marketplace handling.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="direct-inquiry">
       <div class="container">
-        <div class="panel word-wall">
-          <h2 class="section-title">The language of the name</h2>
-          <p class="section-copy" style="margin-bottom: 20px;">
-            These are not just categories. They are the visual engine of the site —
-            poster-like, layered, energetic, and built to stand out.
-          </p>
-
-          <div class="word-cloud">
-            <span class="big">NEWS</span>
-            <span>UPDATES</span>
-            <span class="big">GOSSIP</span>
-            <span>TOURS</span>
-            <span class="big">FAN CLUBS</span>
-            <span>FEATURES</span>
-            <span class="big">MERCHANDISE</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sale">
-      <div class="container sale-grid">
-        <div class="panel sale-copy">
-          <h2 class="section-title">Domain for sale</h2>
+        <div class="section-head">
+          <div class="kicker">Direct inquiry</div>
+          <h2>Let’s talk acquisition.</h2>
           <p>
-            KpopGen.xyz is a brandable domain name available for acquisition.
-            It is positioned for K-pop media, fandom commerce, digital community,
-            youth culture, tours, and entertainment use.
+            Email direct inquiries for KpopGen.xyz using the address below.
           </p>
-          <p>
-            This domain is being used as its own showcase landing page to demonstrate
-            naming potential to buyers, investors, media groups, and entertainment operators.
-          </p>
-
-          <ul class="sale-list">
-            <li>Listed on GoDaddy</li>
-            <li>Serious inquiries welcome</li>
-            <li>Direct email contact available</li>
-            <li>Open to considering up to 80% of value in non-advisory equity</li>
-          </ul>
-
-          <div class="price-box">
-            <strong>Interested in acquiring KpopGen.xyz?</strong>
-            <span>View the GoDaddy listing or send a direct inquiry by email.</span>
-          </div>
-
-          <div class="sale-actions">
-            <a href="https://auctions.godaddy.com/beta?itc=dcc_portfolio_auctions&query=Kpopgen.xyz" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GoDaddy Listing</a>
-            <a href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20about%20KpopGen.xyz" class="btn btn-secondary">Email Inquiry</a>
-          </div>
         </div>
 
-        <div class="panel sale-form">
-          <h2 style="font-size: 1.8rem; margin-bottom: 10px;">Direct inquiry</h2>
-          <p>
-            Email all direct inquiries to:
-          </p>
+        <div class="sale-grid">
+          <article class="contact-card">
+            <h3>Email</h3>
+            <p>
+              <strong>rgcoldworld@outlook.com</strong>
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20for%20KpopGen.xyz">
+                Send Email
+              </a>
+            </div>
+          </article>
 
-          <div class="contact-card">
-            <strong>Email</strong>
-            <a href="mailto:rgcoldworld@outlook.com?subject=Inquiry%20about%20KpopGen.xyz">rgcoldworld@outlook.com</a>
-          </div>
-
-          <div class="contact-card">
-            <strong>GoDaddy Listing</strong>
-            <a href="https://auctions.godaddy.com/beta?itc=dcc_portfolio_auctions&query=Kpopgen.xyz" target="_blank" rel="noopener noreferrer">View GoDaddy Listing</a>
-          </div>
-
-          <p class="note">Direct inquiries via the live page are welcome. Use the GoDaddy listing for marketplace details.</p>
+          <article class="contact-card">
+            <h3>Marketplace</h3>
+            <p>
+              Use the GoDaddy listing for marketplace visibility and listing details.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="btn btn-secondary"
+                href="https://auctions.godaddy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open GoDaddy Listing
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-wrap">
-      <div>
-        <strong style="font-size: 1.1rem;">KpopGen.xyz</strong>
-        <p>Gen is for Generations.</p>
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-brand">KpopGen.xyz</div>
+        <div>Gen is for generations.</div>
+        <div style="margin-top: 8px;">Brandable domain name and concept available for acquisition.</div>
       </div>
-      <p>Brandable domain name and concept available for acquisition.</p>
     </div>
   </footer>
 
   <script>
-    const storyPanels = document.querySelectorAll('.story-panel');
-    const storyDots = document.querySelectorAll('.story-dot');
-    const prevBtn = document.getElementById('storyPrev');
-    const nextBtn = document.getElementById('storyNext');
+    const slides = document.querySelectorAll(".slide");
+    const thumbs = document.querySelectorAll(".thumb");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-    let activeIndex = 0;
-    let storyTimer;
+    let currentSlide = 0;
 
-    function setActivePanel(index) {
-      activeIndex = index;
-
-      storyPanels.forEach((panel, i) => {
-        panel.classList.toggle('active', i === activeIndex);
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
       });
 
-      storyDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === activeIndex);
+      thumbs.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
       });
+
+      currentSlide = index;
     }
 
-    function nextPanel() {
-      const nextIndex = (activeIndex + 1) % storyPanels.length;
-      setActivePanel(nextIndex);
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
     }
 
-    function prevPanel() {
-      const prevIndex = (activeIndex - 1 + storyPanels.length) % storyPanels.length;
-      setActivePanel(prevIndex);
+    function prevSlide() {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
     }
 
-    function startStoryAuto() {
-      clearInterval(storyTimer);
-      storyTimer = setInterval(nextPanel, 3600);
-    }
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
 
-    if (storyPanels.length) {
-      setActivePanel(0);
-      startStoryAuto();
-
-      nextBtn.addEventListener('click', () => {
-        nextPanel();
-        startStoryAuto();
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        showSlide(Number(thumb.dataset.slide));
       });
-
-      prevBtn.addEventListener('click', () => {
-        prevPanel();
-        startStoryAuto();
-      });
-
-      storyDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          setActivePanel(index);
-          startStoryAuto();
-        });
-      });
-
-      storyPanels.forEach((panel, index) => {
-        panel.addEventListener('mouseenter', () => {
-          setActivePanel(index);
-          clearInterval(storyTimer);
-        });
-
-        panel.addEventListener('mouseleave', () => {
-          startStoryAuto();
-        });
-      });
-    }
+    });
   </script>
 </body>
 </html>
